@@ -5,7 +5,7 @@ import Second from "./pages/second";
 import Third from "./pages/third";
 import Fourth from "./pages/fourth";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import "./App.css";
 
@@ -69,6 +69,7 @@ function App() {
       // ##### 스크롤 올릴 때 #######
       else {
         if (scrollTop >= 0 && scrollTop < pageHeight) {
+          console.log("현재 1페이지");
           //현재 1페이지
           outerDivRef.current.scrollTo({
             //걍 그대로임
@@ -77,6 +78,7 @@ function App() {
             behavior: "smooth",
           });
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
+          console.log("현재 2페이지");
           //2번째 페이지 영역 벗어나면
           //현재 2페이지
           outerDivRef.current.scrollTo({
@@ -86,18 +88,20 @@ function App() {
             behavior: "smooth",
           });
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
+          console.log("현재 3페이지");
           //2번째 페이지 영역 벗어나면
           //현재 2페이지
           outerDivRef.current.scrollTo({
             //스크롤 움직여주는 함수
-            top: pageHeight - DIVIDER_HEIGHT,
+            top: pageHeight * 2 - DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
         } else {
           // 현재 3페이지
+          console.log("현재 4페이지");
           outerDivRef.current.scrollTo({
-            top: pageHeight - DIVIDER_HEIGHT,
+            top: pageHeight * 3 - DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
