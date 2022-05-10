@@ -1,17 +1,10 @@
 import React from "react";
-
+import { Circle, PageContainer } from "../components/Style";
 function fourth() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        width: "100vw",
-        backgroundColor: "dodgerblue",
-      }}
-    >
-      fourth
-    </div>
+    <PageContainer background="dodgerblue">
+      {/* <Circle className="wow animate__bounce"></Circle> */}
+    </PageContainer>
   );
 }
 
