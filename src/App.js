@@ -1,17 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 // import Pageable from "pageable";
-import First from "./pages/first";
-import Second from "./pages/second";
-import Third from "./pages/third";
-import Fourth from "./pages/fourth";
+// import First from "./pages/first";
+// import Second from "./pages/second";
+// import Third from "./pages/third";
+// import Fourth from "./pages/fourth";
 
 import "./App.css";
 
-const DIVIDER_HEIGHT = 5; //페이지와 페이지 사이에 빈공간 (오차허용범위)
-
 function App() {
   return (
-    // <div ref={outerDivRef} className="outer">
+
     <article className="scroller">
       <section>
         <div
@@ -51,7 +49,7 @@ function App() {
         ></div>
       </section>
     </article>
-    // </div>
+
   );
 }
 
