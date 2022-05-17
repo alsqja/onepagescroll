@@ -2,31 +2,3 @@ body {
   margin: 0;
   overflow-y: hidden;
 }
-
-.outer {
-  height: 100vh;
-  overflow-y: auto;
-}
-
-/* 화면에서 스크롤바 안보이게 */
-.outer::-webkit-scrollbar {
-  display: none;
-}
-
-.inner {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-}
-
-.scroller {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.scroller section {
-  scroll-snap-align: start;
-}

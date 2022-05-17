@@ -1,15 +1,14 @@
-import React from "react";
-import { Circle, PageContainer } from "../components/Style";
-
-function third() {
+import React, { forwardRef } from "react";
+import { PageContainer, TextDiv } from "../style/Style";
+import { useRecoilValue } from "recoil";
+import { page } from "../store/recoil";
+const third = forwardRef((props, ref) => {
+  const current = useRecoilValue(page);
   return (
-    <PageContainer background="gold">
-      <div className="reveal">
-        {/* <Circle className="wow animate__bounce"></Circle>
-        <Circle className="wow animate__bounce"></Circle> */}
-      </div>
+    <PageContainer ref={ref}>
+      <TextDiv className={current === 3 ? "action third" : null}>Third</TextDiv>
     </PageContainer>
   );
-}
+});
 
 export default third;

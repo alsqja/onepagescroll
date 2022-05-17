@@ -1,14 +1,16 @@
-import React from "react";
-import { Circle, PageContainer } from "../components/Style";
-function second() {
+import React, { forwardRef } from "react";
+import { PageContainer, TextDiv } from "../style/Style";
+import { useRecoilValue } from "recoil";
+import { page } from "../store/recoil";
+const second = forwardRef((props, ref) => {
+  const current = useRecoilValue(page);
   return (
-    <PageContainer background="yellowgreen">
-      <div className="reveal">
-        {/* <Circle className="wow animate__bounce"></Circle>
-        <Circle className="wow animate__bounce" /> */}
-      </div>
+    <PageContainer ref={ref}>
+      <TextDiv className={current === 2 ? "action second" : null}>
+        Second
+      </TextDiv>
     </PageContainer>
   );
-}
+});
 
 export default second;
