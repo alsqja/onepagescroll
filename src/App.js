@@ -39,12 +39,10 @@ function App() {
   return (
     <>
       <Wraper>
-        {/* <RecoilRoot> */}
         <First ref={first} />
         <Second ref={second} />
         <Third ref={third} />
         <Fourth ref={fourth} />
-        {/* </RecoilRoot> */}
       </Wraper>
     </>
   );
