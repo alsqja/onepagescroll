@@ -6,9 +6,7 @@ const fourth = forwardRef((props, ref) => {
   const current = useRecoilValue(page);
   return (
     <PageContainer ref={ref}>
-      <TextDiv className={current === 4 ? "action fourth" : null}>
-        fourth
-      </TextDiv>
+      <TextDiv className={current === 4 ? "action " : null}>fourth</TextDiv>
     </PageContainer>
   );
 });
